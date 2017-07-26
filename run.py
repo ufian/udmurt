@@ -71,7 +71,7 @@ def handle_message(sc, event):
 
 
 def main():
-    log_level = os.getenv("LOG_LEVEL", "INFO")
+    log_level = os.getenv("LOG_LEVEL", "INFO") or "INFO"
     logging.basicConfig(format='%(asctime)s - %(levelname)s: %(message)s', level=log_level)
     
     slack_token = os.getenv("SLACK_TOKEN", "")
